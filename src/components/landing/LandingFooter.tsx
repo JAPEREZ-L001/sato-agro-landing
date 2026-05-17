@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom"
+import { Mail, MapPin } from "lucide-react"
 
 export function LandingFooter() {
   return (
     <footer className="border-t border-[color-mix(in_oklch,var(--sato-color-border)_72%,transparent)] bg-[var(--sato-color-bg)] py-16">
-      <div className="landing-container grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div className="flex flex-col gap-5">
+      <div className="landing-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* Brand column */}
+        <div className="flex flex-col gap-5 lg:col-span-1">
           <div className="flex items-center gap-2">
             <img 
               src="https://res.cloudinary.com/dywctapuj/image/upload/f_png/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
@@ -23,6 +25,7 @@ export function LandingFooter() {
           </p>
         </div>
 
+        {/* Producto column */}
         <div className="flex flex-col gap-4">
           <h4 className="font-black text-[var(--sato-color-text)]">Producto</h4>
           <a href="#como-funciona" className="text-[0.84rem] font-extrabold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] transition-all duration-300 hover:translate-x-1">Como funciona</a>
@@ -30,11 +33,24 @@ export function LandingFooter() {
           <a href="#faq" className="text-[0.84rem] font-extrabold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] transition-all duration-300 hover:translate-x-1">Preguntas frecuentes</a>
         </div>
 
+        {/* Legal column */}
         <div className="flex flex-col gap-4">
           <h4 className="font-black text-[var(--sato-color-text)]">Legal</h4>
           <Link to="/privacidad" className="text-[0.84rem] font-extrabold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] transition-all duration-300 hover:translate-x-1">Privacidad</Link>
           <Link to="/terminos" className="text-[0.84rem] font-extrabold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] transition-all duration-300 hover:translate-x-1">Terminos</Link>
-          <a href="mailto:contacto@sato-agro.com" className="text-[0.84rem] font-extrabold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] transition-all duration-300 hover:translate-x-1">Contacto</a>
+        </div>
+
+        {/* Contacto column */}
+        <div className="flex flex-col gap-4">
+          <h4 className="font-black text-[var(--sato-color-text)]">Contacto</h4>
+          <a href="mailto:contacto@sato-agro.com" className="text-[0.84rem] font-extrabold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] transition-all duration-300 hover:translate-x-1 flex items-center gap-2">
+            <Mail className="w-4 h-4" />
+            contacto@sato-agro.com
+          </a>
+          <div className="text-[0.84rem] font-extrabold text-[var(--sato-color-text-muted)] flex items-center gap-2">
+            <MapPin className="w-4 h-4" />
+            El Salvador
+          </div>
         </div>
       </div>
       <div className="landing-container mt-14 pt-8 border-t border-[color-mix(in_oklch,var(--sato-color-border)_72%,transparent)] flex flex-col md:flex-row items-center justify-between gap-4">

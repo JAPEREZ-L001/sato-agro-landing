@@ -10,7 +10,6 @@ import { LandingTrust } from "@/components/landing/LandingTrust"
 import { LandingFaq } from "@/components/landing/LandingFaq"
 import { LandingGoalGradient } from "@/components/landing/LandingGoalGradient"
 import { LandingFooter } from "@/components/landing/LandingFooter"
-import { APP_URL } from "@/lib/app-url"
 
 export function LandingProductorPage() {
   return (
@@ -21,11 +20,11 @@ export function LandingProductorPage() {
           eyebrow="Para productores de maiz y frijol en El Salvador"
           h1="Proteja su cosecha antes de la canicula."
           subheadline="Le avisamos a tiempo y le decimos que revisar en su parcela. Sin mapas complicados. En espanol claro."
-          primaryCtaText="Revisar mi cultivo gratis"
-          primaryCtaLink={APP_URL}
+          primaryCtaText="Ver como funciona"
+          primaryCtaLink="#como-funciona"
           secondaryCtaText="Ver un ejemplo de alerta"
           secondaryCtaLink="#ejemplo"
-          microcopy="Gratis para empezar - Sin tarjeta - 2 minutos"
+          microcopy="Gratis para empezar - 2 minutos"
           isProductor={true}
           showVideoDemo={true}
         />

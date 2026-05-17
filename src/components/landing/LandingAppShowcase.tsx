@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react"
-import { Play, Pause, Volume2, VolumeX } from "lucide-react"
+import { Play, Pause } from "lucide-react"
 import { LandingReveal } from "@/components/landing/LandingReveal"
 
 interface LandingAppShowcaseProps {
@@ -18,7 +18,6 @@ export function LandingAppShowcase({
   const videoRef = useRef<HTMLVideoElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [isMuted, setIsMuted] = useState(true)
   const [hasInteracted, setHasInteracted] = useState(false)
 
   // Auto-play when in view
@@ -58,13 +57,6 @@ export function LandingAppShowcase({
       video.pause()
       setIsPlaying(false)
     }
-  }
-
-  const toggleMute = () => {
-    const video = videoRef.current
-    if (!video) return
-    video.muted = !video.muted
-    setIsMuted(video.muted)
   }
 
   return (
@@ -118,7 +110,7 @@ export function LandingAppShowcase({
                 <video
                   ref={videoRef}
                   src={videoSrc}
-                  muted={isMuted}
+                  muted
                   loop
                   playsInline
                   className="w-full h-full object-cover"
@@ -144,7 +136,7 @@ export function LandingAppShowcase({
 
                 {/* Control bar */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-center">
                     <button
                       onClick={togglePlay}
                       className="w-9 h-9 rounded-full bg-[var(--sato-color-bg-card)]/80 backdrop-blur-sm flex items-center justify-center hover:bg-[var(--sato-color-bg-card)] transition-colors"
@@ -154,18 +146,6 @@ export function LandingAppShowcase({
                         <Pause className="w-4 h-4 text-[var(--sato-color-text)]" />
                       ) : (
                         <Play className="w-4 h-4 text-[var(--sato-color-text)] ml-0.5" />
-                      )}
-                    </button>
-
-                    <button
-                      onClick={toggleMute}
-                      className="w-9 h-9 rounded-full bg-[var(--sato-color-bg-card)]/80 backdrop-blur-sm flex items-center justify-center hover:bg-[var(--sato-color-bg-card)] transition-colors"
-                      aria-label={isMuted ? "Activar sonido" : "Silenciar"}
-                    >
-                      {isMuted ? (
-                        <VolumeX className="w-4 h-4 text-[var(--sato-color-text)]" />
-                      ) : (
-                        <Volume2 className="w-4 h-4 text-[var(--sato-color-text)]" />
                       )}
                     </button>
                   </div>

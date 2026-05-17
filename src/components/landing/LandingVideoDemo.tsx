@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react"
-import { Play, Pause, Volume2, VolumeX } from "lucide-react"
+import { Play, Pause } from "lucide-react"
 
 interface LandingVideoDemoProps {
   videoSrc: string
@@ -10,7 +10,6 @@ interface LandingVideoDemoProps {
 export function LandingVideoDemo({ videoSrc, posterSrc, className = "" }: LandingVideoDemoProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [isMuted, setIsMuted] = useState(true)
   const [showControls, setShowControls] = useState(true)
 
   useEffect(() => {
@@ -71,14 +70,6 @@ export function LandingVideoDemo({ videoSrc, posterSrc, className = "" }: Landin
     }
   }
 
-  const toggleMute = () => {
-    const video = videoRef.current
-    if (!video) return
-
-    video.muted = !video.muted
-    setIsMuted(video.muted)
-  }
-
   return (
     <div className={`relative ${className}`}>
       {/* Mobile device frame */}
@@ -99,7 +90,7 @@ export function LandingVideoDemo({ videoSrc, posterSrc, className = "" }: Landin
             ref={videoRef}
             src={videoSrc}
             poster={posterSrc}
-            muted={isMuted}
+            muted
             loop
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
@@ -123,7 +114,7 @@ export function LandingVideoDemo({ videoSrc, posterSrc, className = "" }: Landin
 
           {/* Bottom controls */}
           <div 
-            className={`absolute bottom-0 left-0 right-0 p-4 flex items-center justify-between transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute bottom-0 left-0 right-0 p-4 flex items-center justify-center transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}
           >
             {/* Play/Pause small button */}
             <button
@@ -135,19 +126,6 @@ export function LandingVideoDemo({ videoSrc, posterSrc, className = "" }: Landin
                 <Pause className="w-4 h-4 text-[var(--sato-color-text)]" />
               ) : (
                 <Play className="w-4 h-4 text-[var(--sato-color-text)] ml-0.5" />
-              )}
-            </button>
-
-            {/* Mute button */}
-            <button
-              onClick={toggleMute}
-              className="w-10 h-10 rounded-full bg-[var(--sato-color-bg-card)]/90 backdrop-blur-sm flex items-center justify-center shadow-md hover:bg-[var(--sato-color-bg-card)] transition-all duration-200"
-              aria-label={isMuted ? "Activar sonido" : "Silenciar"}
-            >
-              {isMuted ? (
-                <VolumeX className="w-4 h-4 text-[var(--sato-color-text)]" />
-              ) : (
-                <Volume2 className="w-4 h-4 text-[var(--sato-color-text)]" />
               )}
             </button>
           </div>
