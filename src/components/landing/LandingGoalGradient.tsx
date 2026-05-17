@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sprout, Calendar, BellRing } from "lucide-react"
+import { Sprout, Calendar, BellRing } from "lucide-react"
 import { LandingReveal } from "@/components/landing/LandingReveal"
 import { APP_URL } from "@/lib/app-url"
 
@@ -86,9 +85,12 @@ export function LandingGoalGradient() {
               Gratis - 2 minutos - Sin tarjeta
             </p>
             
-            <Link to="#" className="mt-4 inline-flex items-center gap-2 text-[0.86rem] font-extrabold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] hover:bg-[color-mix(in_oklch,var(--sato-color-accent)_18%,var(--sato-color-bg))] rounded-[0.85rem] px-4 py-2 transition-all duration-300">
-              Como calculamos el riesgo <ArrowRight className="w-4 h-4" />
-            </Link>
+            <button 
+              disabled 
+              className="mt-4 inline-flex items-center gap-2 text-[0.86rem] font-extrabold text-[var(--sato-color-text-muted)]/60 bg-[var(--sato-color-border)]/30 rounded-[0.85rem] px-4 py-2 cursor-not-allowed"
+            >
+              Proximamente
+            </button>
           </div>
         </LandingReveal>
       </div>

@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom"
-import { ArrowRight, AlertTriangle } from "lucide-react"
+import { AlertTriangle } from "lucide-react"
 import { LandingReveal } from "@/components/landing/LandingReveal"
 
 export function LandingTrust() {
@@ -63,9 +62,12 @@ export function LandingTrust() {
           </div>
 
           <div className="text-center">
-            <Link to="#" className="inline-flex items-center justify-center gap-2 text-[var(--sato-color-primary)] font-extrabold hover:bg-[color-mix(in_oklch,var(--sato-color-accent)_18%,var(--sato-color-bg))] rounded-[0.85rem] px-4 py-2 transition-all duration-300">
-              Como calculamos el riesgo <ArrowRight className="w-4 h-4" />
-            </Link>
+            <button 
+              disabled 
+              className="inline-flex items-center justify-center gap-2 text-[var(--sato-color-text-muted)]/60 font-extrabold bg-[var(--sato-color-border)]/30 rounded-[0.85rem] px-4 py-2 cursor-not-allowed"
+            >
+              Proximamente
+            </button>
           </div>
         </LandingReveal>
       </div>
