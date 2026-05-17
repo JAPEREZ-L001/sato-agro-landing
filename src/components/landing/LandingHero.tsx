@@ -5,7 +5,7 @@ import { LandingReveal } from "@/components/landing/LandingReveal"
 import { LandingVideoDemo } from "@/components/landing/LandingVideoDemo"
 import { isExternalUrl } from "@/lib/app-url"
 
-const VIDEO_DEMO_URL = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sato-app-demo-NQN9rVt6uZpbZUbNaoAZQURoW2aoxh.mp4"
+const VIDEO_DEMO_URL = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sato-app-demo-vertical-vVNJEpRUxXU2qILLZ7beCb8mIwlmgi.mp4"
 
 interface LandingHeroProps {
   eyebrow: string
