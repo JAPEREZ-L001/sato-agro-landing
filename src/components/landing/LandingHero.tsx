@@ -28,33 +28,36 @@ export function LandingHero({
   isProductor = true,
 }: LandingHeroProps) {
   return (
-    <section className="landing-section bg-[var(--sato-color-bg-warm)] overflow-hidden" id="ejemplo" aria-label="Hero principal">
-      <div className="landing-container">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+    <section className="landing-section bg-[var(--sato-color-bg-warm)] overflow-hidden relative" id="ejemplo" aria-label="Hero principal">
+      {/* Background decorative gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[var(--sato-color-accent-cyan)]/5 via-transparent to-[var(--sato-color-primary)]/5 pointer-events-none" aria-hidden="true"></div>
+      
+      <div className="landing-container relative">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-12">
           
           {/* Text Content */}
           <LandingReveal variant="left" className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start max-w-3xl mx-auto lg:mx-0">
-            <p className="text-sm font-bold text-[var(--sato-color-primary)] tracking-wide uppercase mb-4 inline-flex items-center gap-2">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[var(--sato-color-primary)] landing-anim-float-sm" aria-hidden="true"></span>
+            <p className="text-sm font-extrabold text-[var(--sato-color-primary)] tracking-widest uppercase mb-5 inline-flex items-center gap-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-[var(--sato-color-accent-cyan)] landing-anim-pulse-glow" aria-hidden="true"></span>
               {eyebrow}
             </p>
-            <h1 className="text-[var(--sato-text-display)] font-bold tracking-tight mb-6 leading-[1.05] text-[var(--sato-color-text)]">
+            <h1 className="text-[var(--sato-text-display)] font-extrabold tracking-tight mb-6 leading-[1.05] text-[var(--sato-color-text)]">
               {h1}
             </h1>
-            <p className="text-[var(--sato-text-body-lg)] text-[var(--sato-color-text-muted)] mb-8 max-w-2xl">
+            <p className="text-[var(--sato-text-body-lg)] text-[var(--sato-color-text-muted)] mb-10 max-w-2xl leading-relaxed">
               {subheadline}
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
               {isExternalUrl(primaryCtaLink) ? (
                 <a href={primaryCtaLink} className="w-full sm:w-auto">
-                  <Button size="lg" className="landing-cta-shine w-full sm:w-auto bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white border-none shadow-sm hover:shadow-lg rounded-[var(--sato-radius-button)] text-base h-12 px-8 transition-all duration-300 hover:-translate-y-0.5">
+                  <Button size="lg" className="landing-cta-shine landing-cta-pulse w-full sm:w-auto bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white border-none shadow-lg hover:shadow-xl rounded-[var(--sato-radius-button)] text-base font-bold h-14 px-10 transition-all duration-500">
                     {primaryCtaText}
                   </Button>
                 </a>
               ) : (
                 <Link to={primaryCtaLink} className="w-full sm:w-auto">
-                  <Button size="lg" className="landing-cta-shine w-full sm:w-auto bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white border-none shadow-sm hover:shadow-lg rounded-[var(--sato-radius-button)] text-base h-12 px-8 transition-all duration-300 hover:-translate-y-0.5">
+                  <Button size="lg" className="landing-cta-shine landing-cta-pulse w-full sm:w-auto bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white border-none shadow-lg hover:shadow-xl rounded-[var(--sato-radius-button)] text-base font-bold h-14 px-10 transition-all duration-500">
                     {primaryCtaText}
                   </Button>
                 </Link>
@@ -62,25 +65,25 @@ export function LandingHero({
               {secondaryCtaLink.startsWith("#") ? (
                 <a
                   href={secondaryCtaLink}
-                  className="w-full sm:w-auto group flex items-center justify-center gap-2 text-base font-medium text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-text)] transition-colors h-12 px-4"
+                  className="w-full sm:w-auto group flex items-center justify-center gap-2 text-base font-semibold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] transition-all duration-300 h-14 px-4"
                 >
                   {secondaryCtaText}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                 </a>
               ) : (
                 <Link
                   to={secondaryCtaLink}
-                  className="w-full sm:w-auto group flex items-center justify-center gap-2 text-base font-medium text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-text)] transition-colors h-12 px-4"
+                  className="w-full sm:w-auto group flex items-center justify-center gap-2 text-base font-semibold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] transition-all duration-300 h-14 px-4"
                 >
                   {secondaryCtaText}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>
               )}
             </div>
             
             {microcopy && (
-              <p className="mt-4 text-sm text-[var(--sato-color-text-subtle)] font-medium flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[var(--sato-color-primary)]" aria-hidden="true" />
+              <p className="mt-6 text-sm text-[var(--sato-color-text-subtle)] font-semibold flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-[var(--sato-color-accent-cyan)]" aria-hidden="true" />
                 {microcopy}
               </p>
             )}
@@ -88,15 +91,18 @@ export function LandingHero({
 
           {/* Media / Mock UI */}
           <LandingReveal variant="right" delay={150} className="flex-1 w-full max-w-md lg:max-w-none relative">
-            <div className="relative mx-auto w-full max-w-[340px] aspect-[4/5] bg-white rounded-[24px] shadow-2xl border border-[var(--sato-color-border)] overflow-hidden flex flex-col landing-anim-float">
+            <div className="relative mx-auto w-full max-w-[360px] aspect-[4/5] bg-white rounded-[var(--sato-radius-card-lg)] shadow-2xl border border-[var(--sato-color-border)] overflow-hidden flex flex-col landing-anim-float landing-hover-lift">
               {/* Mock App Header */}
-              <div className="h-14 bg-[var(--sato-color-primary)] flex items-center px-4">
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">S</span>
-                </div>
-                <div className="ml-3">
-                  <div className="text-white text-sm font-semibold">Mi Parcela</div>
-                  <div className="text-white/80 text-xs">San Miguel, El Salvador</div>
+              <div className="h-16 bg-gradient-to-r from-[var(--sato-color-primary)] to-[var(--sato-color-primary-light)] flex items-center px-5">
+                <img 
+                  src="/images/sato-symbol.png" 
+                  alt="" 
+                  className="h-10 w-auto rounded-lg" 
+                  aria-hidden="true"
+                />
+                <div className="ml-4">
+                  <div className="text-white text-sm font-bold">Mi Parcela</div>
+                  <div className="text-white/80 text-xs font-medium">San Miguel, El Salvador</div>
                 </div>
               </div>
               
@@ -162,9 +168,10 @@ export function LandingHero({
               </div>
             </div>
             
-            {/* Decorative elements */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-amber-400/20 rounded-full blur-2xl -z-10 landing-anim-blob" aria-hidden="true"></div>
-            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[var(--sato-color-primary)]/10 rounded-full blur-2xl -z-10 landing-anim-blob" style={{ animationDelay: "2s" }} aria-hidden="true"></div>
+            {/* Decorative elements — más vibrantes */}
+            <div className="absolute -top-8 -right-8 w-32 h-32 bg-[var(--sato-color-accent-cyan)]/20 rounded-full blur-3xl -z-10 landing-anim-blob" aria-hidden="true"></div>
+            <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-[var(--sato-color-primary)]/15 rounded-full blur-3xl -z-10 landing-anim-blob" style={{ animationDelay: "2s" }} aria-hidden="true"></div>
+            <div className="absolute top-1/2 -right-4 w-20 h-20 bg-[var(--sato-color-accent-amber)]/20 rounded-full blur-2xl -z-10 landing-anim-float-sm" aria-hidden="true"></div>
           </LandingReveal>
           
         </div>

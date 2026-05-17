@@ -4,8 +4,10 @@
   /* Colores SATO-Agro */
   --sato-color-primary: #1B5E3B; /* Verde agrícola profundo */
   --sato-color-primary-active: #14452B;
+  --sato-color-primary-light: #2D7A50; /* Verde más claro para gradientes */
   --sato-color-secondary: #556B2F; /* Verde seco/oliva */
   --sato-color-accent-amber: #F59E0B; /* Ámbar suave para alertas */
+  --sato-color-accent-cyan: #5BAFB5; /* Cyan/teal para acentos secundarios */
   
   --sato-color-text: #2D2D2D; /* Gris grafito */
   --sato-color-text-muted: #615d59;
@@ -35,6 +37,7 @@
   /* Radio y sombras */
   --sato-radius-button: 8px;
   --sato-radius-card: 12px;
+  --sato-radius-card-lg: 24px;
   --sato-radius-pill: 9999px;
   --sato-shadow-card: rgba(0, 0, 0, 0.04) 0px 4px 18px 0px, rgba(0, 0, 0, 0.027) 0px 2px 7.8px 0px;
 
@@ -292,6 +295,16 @@
 }
 .landing-cta-shine:hover::before {
   transform: translateX(100%);
+}
+
+/* CTA pulse glow for primary action */
+@keyframes landing-cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(27, 94, 59, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(27, 94, 59, 0); }
+}
+
+.landing-cta-pulse {
+  animation: landing-cta-pulse 2s ease-in-out infinite;
 }
 
 /* Stagger helper — apply data-stagger-index to children */

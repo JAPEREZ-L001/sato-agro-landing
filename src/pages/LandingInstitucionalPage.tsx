@@ -27,26 +27,31 @@ export function LandingInstitucionalPage() {
 
   return (
     <div className="landing-page min-h-screen flex flex-col">
-      <header className="sticky top-0 z-50 w-full border-b border-[var(--sato-color-border)] bg-white/80 backdrop-blur-md">
-        <div className="landing-container flex h-16 items-center justify-between">
+      <header className="sticky top-0 z-50 w-full border-b border-[var(--sato-color-border)] bg-white/90 backdrop-blur-lg shadow-sm">
+        <div className="landing-container flex h-18 items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link to="/" className="flex items-center gap-2 group">
-              <div className="h-8 w-8 rounded-md bg-[var(--sato-color-primary)] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                <span className="text-white font-bold text-lg leading-none">S</span>
-              </div>
-              <span className="font-heading font-bold text-xl tracking-tight text-[var(--sato-color-text)]">
-                SATO-Agro
-              </span>
+            <Link to="/" className="flex items-center gap-1 group">
+              <img 
+                src="/images/sato-symbol.png" 
+                alt="" 
+                className="h-10 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" 
+                aria-hidden="true"
+              />
+              <img 
+                src="/images/sato-title.png" 
+                alt="SATO" 
+                className="h-7 w-auto hidden sm:block"
+              />
             </Link>
-            <span className="text-xs font-semibold px-2 py-1 bg-[var(--sato-color-bg-warm)] text-[var(--sato-color-text-muted)] rounded-md hidden sm:inline-block">
+            <span className="text-xs font-bold px-3 py-1.5 bg-[var(--sato-color-primary)]/10 text-[var(--sato-color-primary)] rounded-full hidden sm:inline-block">
               Para Instituciones
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <Link to="/" className="landing-nav-link text-sm font-medium text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-text)] hidden sm:block">
+            <Link to="/" className="landing-nav-link text-sm font-semibold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] hidden sm:block transition-all duration-300">
               Soy productor
             </Link>
-            <Button className="landing-cta-shine bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white border-none shadow-sm hover:shadow-md rounded-[var(--sato-radius-button)] transition-all duration-300 hover:-translate-y-0.5">
+            <Button className="landing-cta-shine bg-gradient-to-r from-[var(--sato-color-primary)] to-[var(--sato-color-primary-light)] hover:from-[var(--sato-color-primary-active)] hover:to-[var(--sato-color-primary)] text-white border-none shadow-md hover:shadow-lg rounded-[var(--sato-radius-button)] font-bold transition-all duration-500">
               Solicitar piloto
             </Button>
           </div>

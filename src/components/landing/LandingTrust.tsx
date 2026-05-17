@@ -1,18 +1,23 @@
 import { Link } from "react-router-dom"
-import { ArrowRight, ShieldCheck, AlertTriangle } from "lucide-react"
+import { ArrowRight, AlertTriangle } from "lucide-react"
 import { LandingReveal } from "@/components/landing/LandingReveal"
 
 export function LandingTrust() {
   return (
-    <section className="landing-section bg-[var(--sato-color-bg-warm)] border-y border-[var(--sato-color-border)]" id="confianza" aria-labelledby="trust-title">
-      <div className="landing-container">
+    <section className="landing-section bg-[var(--sato-color-bg-warm)] border-y border-[var(--sato-color-border)] relative overflow-hidden" id="confianza" aria-labelledby="trust-title">
+      {/* Decorative background symbol */}
+      <div className="absolute -top-12 -right-12 opacity-5 pointer-events-none landing-anim-float hidden lg:block" aria-hidden="true">
+        <img src="/images/sato-symbol.png" alt="" className="w-48 h-auto" />
+      </div>
+      
+      <div className="landing-container relative">
         <LandingReveal className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center p-3 bg-[var(--sato-color-primary)]/10 rounded-full mb-6 landing-anim-float-sm">
-              <ShieldCheck className="w-8 h-8 text-[var(--sato-color-primary)]" />
+            <div className="inline-flex items-center justify-center w-20 h-20 mb-6 landing-anim-float-sm">
+              <img src="/images/sato-symbol.png" alt="" className="w-full h-full object-contain" aria-hidden="true" />
             </div>
             <h2 id="trust-title" className="text-[var(--sato-text-h1)] font-bold tracking-tight mb-6">
-              Claro de dónde viene. Honesto sobre los límites.
+              Claro de donde viene. Honesto sobre los limites.
             </h2>
             <p className="text-[var(--sato-text-body-lg)] text-[var(--sato-color-text-muted)]">
               SATO-Agro no adivina el clima de su parcela al detalle. El backend integra{" "}

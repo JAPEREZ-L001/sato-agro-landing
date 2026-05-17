@@ -31,6 +31,14 @@ export function LandingGoalGradient() {
       {/* Background decorative elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[var(--sato-color-primary)]/5 rounded-full blur-3xl -z-10 landing-anim-blob"></div>
       
+      {/* Decorative SATO symbol - floating in background */}
+      <div className="absolute top-8 right-[5%] opacity-10 pointer-events-none landing-anim-float hidden lg:block" aria-hidden="true">
+        <img src="/images/sato-symbol.png" alt="" className="w-32 h-auto" />
+      </div>
+      <div className="absolute bottom-8 left-[5%] opacity-10 pointer-events-none landing-anim-float-sm hidden lg:block" style={{ animationDelay: "2s" }} aria-hidden="true">
+        <img src="/images/sato-symbol.png" alt="" className="w-24 h-auto" />
+      </div>
+      
       <div className="landing-container relative z-10">
         <LandingReveal className="max-w-4xl mx-auto text-center">
           <h2 className="text-[var(--sato-text-display)] font-bold tracking-tight mb-4 text-[var(--sato-color-text)]">
@@ -69,7 +77,7 @@ export function LandingGoalGradient() {
           {/* CTAs */}
           <div className="flex flex-col items-center gap-4">
             <a href={APP_URL}>
-              <Button size="lg" className="landing-cta-shine bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white border-none shadow-md hover:shadow-xl rounded-[var(--sato-radius-button)] text-lg h-14 px-10 w-full sm:w-auto transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300">
+              <Button size="lg" className="landing-cta-shine landing-cta-pulse bg-gradient-to-r from-[var(--sato-color-primary)] to-[var(--sato-color-primary-light)] hover:from-[var(--sato-color-primary-active)] hover:to-[var(--sato-color-primary)] text-white border-none shadow-lg hover:shadow-xl rounded-[var(--sato-radius-button)] text-lg font-bold h-14 px-12 w-full sm:w-auto transform hover:scale-105 transition-all duration-500">
                 Revisar mi cultivo gratis
               </Button>
             </a>
