@@ -39,13 +39,13 @@ export function LandingProductorPage() {
         
         <LandingFeatureTabs isProductor={true} />
         
-        <LandingAppShowcase />
-        
         <LandingBentoGrid isProductor={true} />
         
         <LandingProductStack />
         
         <LandingTrust />
+        
+        <LandingAppShowcase />
         
         <LandingFaq />
         
