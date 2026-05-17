@@ -45,14 +45,14 @@ export function LandingHero({
           
           {/* Text Content */}
           <LandingReveal variant="left" className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start max-w-3xl mx-auto lg:mx-0">
-            <p className="text-[0.72rem] font-black text-[var(--sato-color-primary)] tracking-[0.18em] uppercase mb-5 inline-flex items-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-[var(--sato-color-accent)] landing-anim-pulse-glow" aria-hidden="true"></span>
+            <p className="text-[0.82rem] sm:text-[0.88rem] font-black text-[var(--sato-color-primary)] tracking-[0.16em] uppercase mb-5 inline-flex items-center gap-2">
+              <span className="inline-block w-2.5 h-2.5 rounded-full bg-[var(--sato-color-accent)] landing-anim-pulse-glow" aria-hidden="true"></span>
               {eyebrow}
             </p>
-            <h1 className="text-[var(--sato-text-display)] font-black tracking-[-0.06em] mb-6 leading-[0.9] text-[var(--sato-color-text)]">
+            <h1 className="text-[2.4rem] sm:text-[3rem] md:text-[3.6rem] lg:text-[4rem] font-black tracking-[-0.04em] mb-7 leading-[1.05] text-[var(--sato-color-text)] text-balance">
               {h1}
             </h1>
-            <p className="text-[var(--sato-text-body-lg)] text-[color-mix(in_oklch,var(--sato-color-text)_72%,var(--sato-color-text-muted))] mb-10 max-w-2xl leading-relaxed">
+            <p className="text-[1.1rem] sm:text-[1.2rem] md:text-[1.3rem] text-[color-mix(in_oklch,var(--sato-color-text)_72%,var(--sato-color-text-muted))] mb-10 max-w-2xl leading-[1.5] text-pretty">
               {subheadline}
             </p>
             
