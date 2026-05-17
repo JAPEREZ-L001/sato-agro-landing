@@ -27,26 +27,31 @@ export function LandingInstitucionalPage() {
 
   return (
     <div className="landing-page min-h-screen flex flex-col">
-      <header className="sticky top-0 z-50 w-full border-b border-[var(--sato-color-border)] bg-white/80 backdrop-blur-md">
-        <div className="landing-container flex h-16 items-center justify-between">
+      <header className="sticky top-0 z-50 w-full border-b border-[var(--sato-color-border)] bg-white/90 backdrop-blur-lg shadow-sm">
+        <div className="landing-container flex h-18 items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-md bg-[var(--sato-color-primary)] flex items-center justify-center">
-                <span className="text-white font-bold text-lg leading-none">S</span>
-              </div>
-              <span className="font-heading font-bold text-xl tracking-tight text-[var(--sato-color-text)]">
-                SATO-Agro
-              </span>
+            <Link to="/" className="flex items-center gap-2 group">
+              <img 
+                src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
+                alt="" 
+                className="h-10 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" 
+                aria-hidden="true"
+              />
+              <img 
+                src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/a3355191-33c8-49dd-9540-9f3378391842_xfdbaw.png" 
+                alt="SATO" 
+                className="h-6 w-auto hidden sm:block"
+              />
             </Link>
-            <span className="text-xs font-semibold px-2 py-1 bg-[var(--sato-color-bg-warm)] text-[var(--sato-color-text-muted)] rounded-md hidden sm:inline-block">
+            <span className="text-xs font-bold px-3 py-1.5 bg-[var(--sato-color-primary)]/10 text-[var(--sato-color-primary)] rounded-full hidden sm:inline-block">
               Para Instituciones
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <Link to="/" className="text-sm font-medium text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-text)] hidden sm:block">
+            <Link to="/" className="landing-nav-link text-sm font-semibold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] hidden sm:block transition-all duration-300">
               Soy productor
             </Link>
-            <Button className="bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white border-none shadow-sm rounded-[var(--sato-radius-button)]">
+            <Button className="landing-cta-shine bg-gradient-to-r from-[var(--sato-color-primary)] to-[var(--sato-color-primary-light)] hover:from-[var(--sato-color-primary-active)] hover:to-[var(--sato-color-primary)] text-white border-none shadow-md hover:shadow-lg rounded-[var(--sato-radius-button)] font-bold transition-all duration-500">
               Solicitar piloto
             </Button>
           </div>
@@ -76,17 +81,25 @@ export function LandingInstitucionalPage() {
         <LandingRoiCalculator />
         
         {/* CTA Institucional */}
-        <section className="landing-section bg-[var(--sato-color-primary)] text-white text-center">
-          <div className="landing-container max-w-3xl mx-auto">
+        <section className="landing-section bg-[var(--sato-color-primary)] text-white text-center relative overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-30 landing-anim-gradient pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 20% 30%, rgba(255,255,255,0.18), transparent 45%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.12), transparent 45%)",
+            }}
+            aria-hidden="true"
+          />
+          <div className="landing-container max-w-3xl mx-auto relative">
             <h2 className="text-[var(--sato-text-display)] font-bold tracking-tight mb-6">
               Lleve decisiones agroclimáticas al último kilómetro
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-white text-[var(--sato-color-primary)] hover:bg-slate-50 border-none shadow-md rounded-[var(--sato-radius-button)] text-lg h-14 px-10 w-full sm:w-auto">
+              <Button size="lg" className="landing-cta-shine bg-white text-[var(--sato-color-primary)] hover:bg-slate-50 border-none shadow-md hover:shadow-xl rounded-[var(--sato-radius-button)] text-lg h-14 px-10 w-full sm:w-auto transition-all duration-300 hover:-translate-y-0.5">
                 Solicitar piloto con productores
               </Button>
-              <Link to="#contacto" className="inline-flex items-center justify-center gap-2 text-white/90 hover:text-white font-medium transition-colors h-14 px-6">
-                Hablar con el equipo <ArrowRight className="w-4 h-4" />
+              <Link to="#contacto" className="group inline-flex items-center justify-center gap-2 text-white/90 hover:text-white font-medium transition-colors h-14 px-6">
+                Hablar con el equipo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>

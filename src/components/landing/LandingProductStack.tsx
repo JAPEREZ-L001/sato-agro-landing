@@ -53,15 +53,15 @@ export function LandingProductStack() {
                 <div key={index} className="relative flex flex-col md:flex-row items-center gap-6 md:gap-12 group">
                   {/* Left side (empty for odd, content for even on desktop) */}
                   <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:text-right' : 'md:order-3'}`}>
-                    <div className={`bg-white p-6 rounded-[var(--sato-radius-card)] border border-slate-200 shadow-sm hover:shadow-md transition-shadow ${index % 2 === 0 ? 'md:ml-auto' : ''} max-w-sm`}>
+                    <div className={`bg-white p-6 rounded-[var(--sato-radius-card)] border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${index % 2 === 0 ? 'md:ml-auto' : ''} max-w-sm`}>
                       <h3 className="text-xl font-bold text-[var(--sato-color-text)] mb-2">{item.title}</h3>
                       <p className="text-[var(--sato-color-text-muted)]">{item.description}</p>
                     </div>
                   </div>
 
                   {/* Center icon */}
-                  <div className={`relative z-10 w-16 h-16 rounded-full bg-white border-4 border-white shadow-md flex items-center justify-center shrink-0 ${item.bgColor} ${index % 2 !== 0 ? 'md:order-2' : ''}`}>
-                    <Icon className={`w-6 h-6 ${item.color}`} />
+                  <div className={`relative z-10 w-16 h-16 rounded-full bg-white border-4 border-white shadow-md flex items-center justify-center shrink-0 ${item.bgColor} ${index % 2 !== 0 ? 'md:order-2' : ''} transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg`}>
+                    <Icon className={`w-6 h-6 ${item.color} landing-hover-wiggle`} />
                   </div>
 
                   {/* Right side (content for odd, empty for even on desktop) */}
