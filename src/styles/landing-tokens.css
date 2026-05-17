@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colores SATO-Agro */
+  --sato-color-primary: #1B5E3B; /* Verde agrícola profundo */
+  --sato-color-primary-active: #14452B;
+  --sato-color-secondary: #556B2F; /* Verde seco/oliva */
+  --sato-color-accent-amber: #F59E0B; /* Ámbar suave para alertas */
+  
+  --sato-color-text: #2D2D2D; /* Gris grafito */
+  --sato-color-text-muted: #615d59;
+  --sato-color-text-subtle: #a39e98;
+  
+  --sato-color-bg-warm: #F9F8F6; /* Tierra clara / blanco cálido */
+  --sato-color-bg-card: #ffffff;
+  --sato-color-border: rgba(0, 0, 0, 0.1);
+  
+  /* Tipografía */
+  --sato-font-sans: 'Nunito', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --sato-font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Escala tipográfica */
+  --sato-text-display: clamp(2.25rem, 5vw, 4rem); /* 64px max */
+  --sato-text-h1: 40px;
+  --sato-text-h2: 26px;
+  --sato-text-body-lg: 20px;
+  --sato-text-body: 16px;
+  --sato-text-caption: 12px;
+
+  /* Espaciado */
+  --sato-space-section: 80px;
+  --sato-space-block: 32px;
+  --sato-space-inline: 16px;
+
+  /* Radio y sombras */
+  --sato-radius-button: 8px;
+  --sato-radius-card: 12px;
+  --sato-radius-pill: 9999px;
+  --sato-shadow-card: rgba(0, 0, 0, 0.04) 0px 4px 18px 0px, rgba(0, 0, 0, 0.027) 0px 2px 7.8px 0px;
+
+  /* Breakpoints (para media queries) */
+  --sato-bp-sm: 600px;
+  --sato-bp-md: 768px;
+  --sato-bp-lg: 1032px;
+  --sato-bp-xl: 1280px;
+  
+  /* Contenedor */
+  --sato-container-max-width: 1280px;
+  --sato-container-padding: 24px;
+}
+
+/* Clases utilitarias base para la landing */
+.landing-container {
+  max-width: var(--sato-container-max-width);
+  margin: 0 auto;
+  padding-left: var(--sato-container-padding);
+  padding-right: var(--sato-container-padding);
+}
+
+.landing-section {
+  padding-top: var(--sato-space-section);
+  padding-bottom: var(--sato-space-section);
+}
+
+.landing-page {
+  font-family: var(--sato-font-sans);
+  color: var(--sato-color-text);
+  background-color: #ffffff;
+}
+
+.landing-page h1, .landing-page h2, .landing-page h3 {
+  font-family: var(--sato-font-heading);
+  color: var(--sato-color-text);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+/* Scroll reveal animation */
+.landing-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.landing-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Respect prefers-reduced-motion globally for landing animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+
+  .landing-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .landing-page *,
+  .landing-page *::before,
+  .landing-page *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Section title spacing helper (reused by all sections) */
+.landing-section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Bento card base styles */
+.landing-bento-card {
+  background: var(--sato-color-bg-card);
+  border: 1px solid var(--sato-color-border);
+  border-radius: var(--sato-radius-card);
+  padding: 24px;
+  box-shadow: var(--sato-shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landing-bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 12px 32px 0px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-bento-card:hover {
+    transform: none;
+  }
+}
