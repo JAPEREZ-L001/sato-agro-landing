@@ -116,7 +116,7 @@ export function LandingHero({
                   {/* Mock App Header */}
                   <div className="h-16 bg-[var(--sato-color-primary)] flex items-center px-5">
                     <img 
-                      src="https://res.cloudinary.com/dywctapuj/image/upload/f_png/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
+                      src="https://res.cloudinary.com/dywctapuj/image/upload/e_make_transparent:30/f_png/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
                       alt="" 
                       className="h-10 w-auto rounded-xl" 
                       aria-hidden="true"

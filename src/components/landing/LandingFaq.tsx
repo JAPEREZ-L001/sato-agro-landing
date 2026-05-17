@@ -46,7 +46,7 @@ export function LandingFaq() {
       
       {/* Floating SATO symbol */}
       <div className="absolute top-12 left-[8%] opacity-8 pointer-events-none landing-anim-float hidden lg:block" aria-hidden="true">
-        <img src="https://res.cloudinary.com/dywctapuj/image/upload/f_png/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" alt="" className="w-20 h-auto" />
+        <img src="https://res.cloudinary.com/dywctapuj/image/upload/e_make_transparent:30/f_png/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" alt="" className="w-20 h-auto" />
       </div>
       
       <div className="landing-container relative">

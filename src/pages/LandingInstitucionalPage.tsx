@@ -32,13 +32,13 @@ export function LandingInstitucionalPage() {
           <div className="flex items-center gap-6">
             <Link to="/" className="flex items-center gap-2 group">
               <img 
-                src="https://res.cloudinary.com/dywctapuj/image/upload/f_png/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
+                src="https://res.cloudinary.com/dywctapuj/image/upload/e_make_transparent:30/f_png/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
                 alt="" 
                 className="h-10 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" 
                 aria-hidden="true"
               />
               <img 
-                src="https://res.cloudinary.com/dywctapuj/image/upload/f_png/q_auto/a3355191-33c8-49dd-9540-9f3378391842_xfdbaw.png" 
+                src="https://res.cloudinary.com/dywctapuj/image/upload/e_make_transparent:30/f_png/q_auto/a3355191-33c8-49dd-9540-9f3378391842_xfdbaw.png" 
                 alt="SATO" 
                 className="h-6 w-auto hidden sm:block"
               />
