@@ -8,7 +8,7 @@ export function LandingTrust() {
       <div className="landing-container">
         <LandingReveal className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center p-3 bg-[var(--sato-color-primary)]/10 rounded-full mb-6">
+            <div className="inline-flex items-center justify-center p-3 bg-[var(--sato-color-primary)]/10 rounded-full mb-6 landing-anim-float-sm">
               <ShieldCheck className="w-8 h-8 text-[var(--sato-color-primary)]" />
             </div>
             <h2 id="trust-title" className="text-[var(--sato-text-h1)] font-bold tracking-tight mb-6">
@@ -37,7 +37,10 @@ export function LandingTrust() {
                 "Última actualización",
                 "De dónde vienen los datos"
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
+                <li
+                  key={i}
+                  className="flex items-start gap-3 transition-transform duration-200 hover:translate-x-1"
+                >
                   <div className="mt-1 w-1.5 h-1.5 rounded-full bg-[var(--sato-color-primary)] shrink-0"></div>
                   <span className="text-[var(--sato-color-text-muted)]">{item}</span>
                 </li>

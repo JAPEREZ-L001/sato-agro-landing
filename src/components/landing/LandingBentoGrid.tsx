@@ -17,8 +17,8 @@ export function LandingBentoGrid({ isProductor = true }: LandingBentoGridProps) 
             <div className="landing-bento-card group">
               <div className="h-48 bg-amber-50 rounded-xl mb-6 flex items-center justify-center border border-amber-100 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-100/50 to-transparent"></div>
-                <div className="bg-white p-4 rounded-lg shadow-sm border border-amber-200 z-10 flex items-center gap-3 transform group-hover:scale-105 transition-transform duration-300">
-                  <div className="bg-amber-100 p-2 rounded-full">
+                <div className="bg-white p-4 rounded-lg shadow-sm border border-amber-200 z-10 flex items-center gap-3 transform group-hover:scale-105 group-hover:-rotate-1 transition-transform duration-300">
+                  <div className="bg-amber-100 p-2 rounded-full landing-pulse-ring text-amber-500">
                     <AlertTriangle className="w-6 h-6 text-amber-600" />
                   </div>
                   <div>
@@ -30,7 +30,7 @@ export function LandingBentoGrid({ isProductor = true }: LandingBentoGridProps) 
               <h3 className="text-xl font-bold text-[var(--sato-color-text)] mb-2">Su cultivo en riesgo — le avisamos</h3>
               <p className="text-[var(--sato-color-text-muted)] mb-6 flex-1">Vea el nivel de riesgo y cuándo actuar.</p>
               <Link to="/app" className="flex items-center gap-2 text-[var(--sato-color-primary)] font-semibold group-hover:text-[var(--sato-color-primary-active)] transition-colors mt-auto">
-                Ver ejemplo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                Ver ejemplo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform landing-arrow-nudge" />
               </Link>
             </div>
 
@@ -38,9 +38,9 @@ export function LandingBentoGrid({ isProductor = true }: LandingBentoGridProps) 
             <div className="landing-bento-card group">
               <div className="h-48 bg-[var(--sato-color-primary)]/5 rounded-xl mb-6 flex items-center justify-center border border-[var(--sato-color-primary)]/10 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--sato-color-primary)]/10 to-transparent"></div>
-                <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 z-10 max-w-[80%] transform group-hover:scale-105 transition-transform duration-300">
+                <div className="bg-white p-4 rounded-lg shadow-sm border border-slate-200 z-10 max-w-[80%] transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-300">
                   <div className="flex items-start gap-3">
-                    <CheckSquare className="w-5 h-5 text-[var(--sato-color-primary)] shrink-0 mt-0.5" />
+                    <CheckSquare className="w-5 h-5 text-[var(--sato-color-primary)] shrink-0 mt-0.5 landing-hover-wiggle" />
                     <div className="text-sm font-medium text-slate-700">Evite aplicar fertilizante si el suelo está seco.</div>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ export function LandingBentoGrid({ isProductor = true }: LandingBentoGridProps) 
               <div className="h-48 bg-slate-100 rounded-xl mb-6 flex items-center justify-center border border-slate-200 overflow-hidden relative">
                 <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
                 <div className="bg-white px-4 py-3 rounded-full shadow-sm border border-slate-200 z-10 flex items-center gap-2 transform group-hover:scale-105 transition-transform duration-300">
-                  <MapPin className="w-4 h-4 text-slate-500" />
+                  <MapPin className="w-4 h-4 text-slate-500 landing-hover-wiggle" />
                   <span className="font-medium text-slate-700">San Miguel, El Salvador</span>
                 </div>
               </div>
@@ -125,17 +125,18 @@ export function LandingBentoGrid({ isProductor = true }: LandingBentoGridProps) 
             </div>
 
             {/* Card 4 (Full width) */}
-            <div className="landing-bento-card group md:col-span-2 bg-[var(--sato-color-primary)] text-white border-none">
-              <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="landing-bento-card group md:col-span-2 bg-[var(--sato-color-primary)] text-white border-none relative overflow-hidden">
+              <div className="absolute inset-0 opacity-20 landing-anim-gradient bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.25),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.18),transparent_50%)] pointer-events-none" aria-hidden="true"></div>
+              <div className="flex flex-col md:flex-row items-center gap-8 relative">
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-3 text-white">Piloto con productores</h3>
                   <p className="text-white/80 mb-6 text-lg">Implementación acompañada y reportes semanales.</p>
-                  <Link to="#contacto" className="inline-flex items-center justify-center gap-2 bg-white text-[var(--sato-color-primary)] px-6 py-3 rounded-[var(--sato-radius-button)] font-semibold hover:bg-slate-50 transition-colors">
+                  <Link to="#contacto" className="landing-cta-shine inline-flex items-center justify-center gap-2 bg-white text-[var(--sato-color-primary)] px-6 py-3 rounded-[var(--sato-radius-button)] font-semibold hover:bg-slate-50 transition-all hover:-translate-y-0.5 hover:shadow-md">
                     Solicitar información
                   </Link>
                 </div>
                 <div className="w-full md:w-1/3 flex justify-center">
-                  <div className="w-32 h-32 rounded-full bg-white/10 flex items-center justify-center">
+                  <div className="w-32 h-32 rounded-full bg-white/10 flex items-center justify-center landing-anim-float">
                     <Users className="w-12 h-12 text-white/80" />
                   </div>
                 </div>

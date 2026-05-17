@@ -16,7 +16,7 @@ export function LandingBeforeAfter() {
 
         <LandingReveal className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto" delay={100}>
           {/* Antes */}
-          <div className="bg-[var(--sato-color-bg-warm)] rounded-[var(--sato-radius-card)] p-8 border border-[var(--sato-color-border)]">
+          <div className="bg-[var(--sato-color-bg-warm)] rounded-[var(--sato-radius-card)] p-8 border border-[var(--sato-color-border)] transition-all duration-300 hover:border-red-200 hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
               <div className="bg-red-100 p-2 rounded-full">
                 <XCircle className="w-6 h-6 text-red-600" />
@@ -40,10 +40,10 @@ export function LandingBeforeAfter() {
           </div>
 
           {/* Con SATO-Agro */}
-          <div className="bg-white rounded-[var(--sato-radius-card)] p-8 border-2 border-[var(--sato-color-primary)] shadow-lg relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-[var(--sato-color-primary)]"></div>
+          <div className="bg-white rounded-[var(--sato-radius-card)] p-8 border-2 border-[var(--sato-color-primary)] shadow-lg relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div className="absolute top-0 left-0 w-full h-1 bg-[var(--sato-color-primary)] origin-left landing-anim-bar-fill"></div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-[var(--sato-color-primary)]/10 p-2 rounded-full">
+              <div className="bg-[var(--sato-color-primary)]/10 p-2 rounded-full landing-pulse-ring text-[var(--sato-color-primary)]">
                 <CheckCircle2 className="w-6 h-6 text-[var(--sato-color-primary)]" />
               </div>
               <h3 className="text-xl font-bold text-[var(--sato-color-text)]">Con SATO-Agro</h3>

@@ -29,7 +29,7 @@ export function LandingGoalGradient() {
   return (
     <section className="landing-section bg-[var(--sato-color-bg-warm)] relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[var(--sato-color-primary)]/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[var(--sato-color-primary)]/5 rounded-full blur-3xl -z-10 landing-anim-blob"></div>
       
       <div className="landing-container relative z-10">
         <LandingReveal className="max-w-4xl mx-auto text-center">
@@ -48,10 +48,14 @@ export function LandingGoalGradient() {
             {steps.map((step, index) => {
               const Icon = step.icon
               return (
-                <div key={index} className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-white border-2 border-[var(--sato-color-primary)] flex items-center justify-center mb-4 shadow-sm relative">
-                    <Icon className="w-6 h-6 text-[var(--sato-color-primary)]" />
-                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[var(--sato-color-primary)] text-white text-xs font-bold flex items-center justify-center">
+                <div
+                  key={index}
+                  className="flex flex-col items-center group"
+                  style={{ animation: `landing-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both`, animationDelay: `${index * 150}ms` }}
+                >
+                  <div className="w-16 h-16 rounded-full bg-white border-2 border-[var(--sato-color-primary)] flex items-center justify-center mb-4 shadow-sm relative transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:rotate-3">
+                    <Icon className="w-6 h-6 text-[var(--sato-color-primary)] landing-hover-wiggle" />
+                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[var(--sato-color-primary)] text-white text-xs font-bold flex items-center justify-center landing-anim-pulse-glow">
                       {step.number}
                     </div>
                   </div>
@@ -65,7 +69,7 @@ export function LandingGoalGradient() {
           {/* CTAs */}
           <div className="flex flex-col items-center gap-4">
             <a href={APP_URL}>
-              <Button size="lg" className="bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white border-none shadow-md rounded-[var(--sato-radius-button)] text-lg h-14 px-10 w-full sm:w-auto transform hover:scale-105 transition-all">
+              <Button size="lg" className="landing-cta-shine bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white border-none shadow-md hover:shadow-xl rounded-[var(--sato-radius-button)] text-lg h-14 px-10 w-full sm:w-auto transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300">
                 Revisar mi cultivo gratis
               </Button>
             </a>

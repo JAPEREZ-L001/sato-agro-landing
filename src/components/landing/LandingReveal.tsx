@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState, type ReactNode } from "react"
 import { cn } from "@/lib/utils"
 
+type RevealVariant = "up" | "fade" | "scale" | "left" | "right"
+
 interface LandingRevealProps {
   children: ReactNode
   className?: string
   delay?: number
   as?: "div" | "section" | "article" | "header"
+  variant?: RevealVariant
 }
 
 export function LandingReveal({
@@ -13,6 +16,7 @@ export function LandingReveal({
   className,
   delay = 0,
   as: Tag = "div",
+  variant = "up",
 }: LandingRevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -46,6 +50,7 @@ export function LandingReveal({
   return (
     <Tag
       ref={ref as React.RefObject<HTMLDivElement>}
+      data-variant={variant}
       className={cn("landing-reveal", isVisible && "is-visible", className)}
     >
       {children}

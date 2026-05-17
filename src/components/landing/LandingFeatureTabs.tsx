@@ -85,16 +85,16 @@ export function LandingFeatureTabs({ isProductor = true }: LandingFeatureTabsPro
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={cn(
-                    "text-left p-6 rounded-[var(--sato-radius-card)] transition-all duration-200 border-2",
+                    "text-left p-6 rounded-[var(--sato-radius-card)] transition-all duration-300 border-2",
                     isActive 
-                      ? "bg-[var(--sato-color-bg-warm)] border-[var(--sato-color-primary)] shadow-md" 
-                      : "bg-white border-transparent hover:bg-slate-50"
+                      ? "bg-[var(--sato-color-bg-warm)] border-[var(--sato-color-primary)] shadow-md scale-[1.02]" 
+                      : "bg-white border-transparent hover:bg-slate-50 hover:border-slate-200 hover:translate-x-1"
                   )}
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <div className={cn(
-                      "p-2 rounded-lg",
-                      isActive ? "bg-[var(--sato-color-primary)] text-white" : "bg-slate-100 text-slate-500"
+                      "p-2 rounded-lg transition-all duration-300",
+                      isActive ? "bg-[var(--sato-color-primary)] text-white scale-110 rotate-3" : "bg-slate-100 text-slate-500"
                     )}>
                       <Icon className="w-5 h-5" />
                     </div>
@@ -232,7 +232,7 @@ export function LandingFeatureTabs({ isProductor = true }: LandingFeatureTabsPro
               
               {/* Decorative background blobs based on active tab */}
               <div className={cn(
-                "absolute w-64 h-64 rounded-full blur-3xl opacity-20 transition-all duration-700",
+                "absolute w-64 h-64 rounded-full blur-3xl opacity-20 transition-all duration-700 landing-anim-blob",
                 activeTab === "alertas" || activeTab === "territoriales" ? "bg-amber-500 top-10 right-10" :
                 activeTab === "que-hacer" || activeTab === "prescripcion" ? "bg-[var(--sato-color-primary)] bottom-10 left-10" :
                 "bg-red-500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"

@@ -38,7 +38,7 @@ export function LandingRoiCalculator() {
                     <Users className="w-5 h-5 text-[var(--sato-color-primary)]" />
                     Productores en cartera
                   </label>
-                  <span className="text-xl font-bold text-[var(--sato-color-primary)]">{productores[0]}</span>
+                  <span key={`prod-${productores[0]}`} className="text-xl font-bold text-[var(--sato-color-primary)] landing-anim-fade-in">{productores[0]}</span>
                 </div>
                 <Slider 
                   defaultValue={[500]} 
@@ -61,7 +61,7 @@ export function LandingRoiCalculator() {
                     <Users className="w-5 h-5 text-[var(--sato-color-secondary)]" />
                     Técnicos / Extensionistas
                   </label>
-                  <span className="text-xl font-bold text-[var(--sato-color-secondary)]">{tecnicos[0]}</span>
+                  <span key={`tec-${tecnicos[0]}`} className="text-xl font-bold text-[var(--sato-color-secondary)] landing-anim-fade-in">{tecnicos[0]}</span>
                 </div>
                 <Slider 
                   defaultValue={[5]} 
@@ -88,7 +88,12 @@ export function LandingRoiCalculator() {
               <div className="space-y-6">
                 <div>
                   <div className="flex items-end gap-3 mb-1">
-                    <span className="text-4xl font-bold text-[var(--sato-color-primary)] tracking-tight">{visitasReorientadas}</span>
+                    <span
+                      key={`visitas-${visitasReorientadas}`}
+                      className="text-4xl font-bold text-[var(--sato-color-primary)] tracking-tight landing-anim-bounce-in"
+                    >
+                      {visitasReorientadas}
+                    </span>
                     <span className="text-lg font-medium text-[var(--sato-color-text)] mb-1">visitas</span>
                   </div>
                   <p className="text-sm text-[var(--sato-color-text-muted)]">
@@ -100,7 +105,12 @@ export function LandingRoiCalculator() {
                 
                 <div>
                   <div className="flex items-end gap-3 mb-1">
-                    <span className="text-4xl font-bold text-[var(--sato-color-secondary)] tracking-tight">{horasAhorradas}</span>
+                    <span
+                      key={`horas-${horasAhorradas}`}
+                      className="text-4xl font-bold text-[var(--sato-color-secondary)] tracking-tight landing-anim-bounce-in"
+                    >
+                      {horasAhorradas}
+                    </span>
                     <span className="text-lg font-medium text-[var(--sato-color-text)] mb-1">horas</span>
                   </div>
                   <p className="text-sm text-[var(--sato-color-text-muted)] flex items-center gap-2">
@@ -112,7 +122,7 @@ export function LandingRoiCalculator() {
 
               <div className="mt-8 pt-6 border-t border-slate-100">
                 <Link to="#contacto">
-                  <Button className="w-full bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white group">
+                  <Button className="landing-cta-shine w-full bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-white group transition-all duration-300 hover:shadow-md">
                     Solicitar piloto
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
