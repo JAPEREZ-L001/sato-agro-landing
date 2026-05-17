@@ -57,7 +57,13 @@ export function LandingHero({
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
-              {isExternalUrl(primaryCtaLink) ? (
+              {primaryCtaLink.startsWith("#") ? (
+                <a href={primaryCtaLink} className="w-full sm:w-auto">
+                  <Button size="lg" className="landing-cta-shine w-full sm:w-auto bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-[var(--sato-color-primary-foreground)] border-none shadow-lg hover:shadow-xl rounded-[var(--sato-radius-button)] text-base font-extrabold h-[2.75rem] px-10 transition-all duration-300 active:scale-[0.97]">
+                    {primaryCtaText}
+                  </Button>
+                </a>
+              ) : isExternalUrl(primaryCtaLink) ? (
                 <a href={primaryCtaLink} className="w-full sm:w-auto">
                   <Button size="lg" className="landing-cta-shine w-full sm:w-auto bg-[var(--sato-color-primary)] hover:bg-[var(--sato-color-primary-active)] text-[var(--sato-color-primary-foreground)] border-none shadow-lg hover:shadow-xl rounded-[var(--sato-radius-button)] text-base font-extrabold h-[2.75rem] px-10 transition-all duration-300 active:scale-[0.97]">
                     {primaryCtaText}
