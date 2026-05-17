@@ -19,7 +19,7 @@ export function LandingProductorPage() {
       <main id="main" className="flex-1">
         <LandingHero 
           eyebrow="Para productores de maiz y frijol en El Salvador"
-          h1="Sepa que hacer antes de que la canicula afecte su maiz o frijol."
+          h1="Proteja su cosecha antes de la canicula."
           subheadline="Le avisamos a tiempo y le decimos que revisar en su parcela. Sin mapas complicados. En espanol claro."
           primaryCtaText="Revisar mi cultivo gratis"
           primaryCtaLink={APP_URL}
