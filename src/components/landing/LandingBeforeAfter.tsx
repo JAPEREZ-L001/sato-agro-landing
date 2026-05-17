@@ -3,7 +3,7 @@ import { LandingReveal } from "@/components/landing/LandingReveal"
 
 export function LandingBeforeAfter() {
   return (
-    <section className="landing-section bg-white" aria-labelledby="before-after-title">
+    <section className="landing-section bg-white" id="ejemplo" aria-labelledby="before-after-title">
       <div className="landing-container">
         <LandingReveal className="text-center max-w-2xl mx-auto mb-12">
           <h2 id="before-after-title" className="text-[var(--sato-text-h1)] font-bold tracking-tight mb-4">

@@ -33,7 +33,7 @@ export function LandingHero({
   showVideoDemo = false,
 }: LandingHeroProps) {
   return (
-    <section className="landing-section bg-[var(--sato-color-bg)] overflow-hidden relative" id="ejemplo" aria-label="Hero principal">
+    <section className="landing-section bg-[var(--sato-color-bg)] overflow-hidden relative" aria-label="Hero principal">
       {/* Background decorative gradient — sky + earth tones */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,color-mix(in_oklch,var(--sato-color-primary)_16%,transparent),transparent_34rem)]"></div>
