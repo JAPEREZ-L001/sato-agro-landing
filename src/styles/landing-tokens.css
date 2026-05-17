@@ -1,55 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
 
 :root {
-  /* Colores SATO-Agro */
-  --sato-color-primary: #1B5E3B; /* Verde agrícola profundo */
-  --sato-color-primary-active: #14452B;
-  --sato-color-primary-light: #2D7A50; /* Verde más claro para gradientes */
-  --sato-color-secondary: #556B2F; /* Verde seco/oliva */
-  --sato-color-accent-amber: #F59E0B; /* Ámbar suave para alertas */
-  --sato-color-accent-cyan: #5BAFB5; /* Cyan/teal para acentos secundarios */
+  /* =============================================
+     SATO-Agro Design System Tokens (OKLCH)
+     Fuente de verdad: desing-system.html
+     ============================================= */
   
-  --sato-color-text: #2D2D2D; /* Gris grafito */
-  --sato-color-text-muted: #615d59;
-  --sato-color-text-subtle: #a39e98;
+  /* Colores principales — Verde agricola */
+  --sato-color-primary: oklch(0.45 0.12 155);
+  --sato-color-primary-active: oklch(0.38 0.12 155);
+  --sato-color-primary-light: oklch(0.55 0.12 155);
+  --sato-color-primary-foreground: oklch(0.98 0.005 145);
   
-  --sato-color-bg-warm: #F9F8F6; /* Tierra clara / blanco cálido */
-  --sato-color-bg-card: #ffffff;
-  --sato-color-border: rgba(0, 0, 0, 0.1);
+  /* Colores secundarios y acentos */
+  --sato-color-secondary: oklch(0.92 0.02 85);
+  --sato-color-secondary-foreground: oklch(0.3 0.06 85);
+  --sato-color-accent: oklch(0.75 0.14 85); /* Ambar/dorado para crecimiento */
+  --sato-color-accent-foreground: oklch(0.25 0.06 85);
+  --sato-color-accent-amber: oklch(0.75 0.15 60); /* Warning */
+  --sato-color-accent-cyan: oklch(0.7 0.1 230); /* Sky blue */
   
-  /* Tipografía */
-  --sato-font-sans: 'Nunito', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --sato-font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  /* Colores de estado */
+  --sato-color-warning: oklch(0.75 0.15 60);
+  --sato-color-warning-foreground: oklch(0.3 0.08 60);
+  --sato-color-success: oklch(0.6 0.15 155);
+  --sato-color-success-foreground: oklch(0.98 0.005 145);
+  --sato-color-destructive: oklch(0.55 0.22 30);
+  --sato-color-destructive-foreground: oklch(0.98 0.005 145);
+  
+  /* Colores de entorno agricola */
+  --sato-color-sky-blue: oklch(0.7 0.1 230);
+  --sato-color-sky-light: oklch(0.85 0.06 230);
+  --sato-color-earth-brown: oklch(0.5 0.08 60);
+  --sato-color-earth-light: oklch(0.85 0.04 60);
+  
+  /* Textos */
+  --sato-color-text: oklch(0.18 0.04 150);
+  --sato-color-text-muted: oklch(0.5 0.03 150);
+  --sato-color-text-subtle: oklch(0.65 0.02 150);
+  
+  /* Fondos */
+  --sato-color-bg: oklch(0.97 0.008 145);
+  --sato-color-bg-warm: oklch(0.97 0.008 145);
+  --sato-color-bg-card: oklch(1 0 0 / 0.85);
+  --sato-color-bg-muted: oklch(0.93 0.01 145);
+  
+  /* Bordes */
+  --sato-color-border: oklch(0.88 0.02 145);
+  --sato-color-ring: oklch(0.45 0.12 155);
+  
+  /* Tipografia — Nunito como fuente principal */
+  --sato-font-sans: 'Nunito', 'Nunito Fallback', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sato-font-heading: 'Nunito', 'Nunito Fallback', ui-sans-serif, system-ui, sans-serif;
 
-  /* Escala tipográfica */
-  --sato-text-display: clamp(2.25rem, 5vw, 4rem); /* 64px max */
-  --sato-text-h1: 40px;
-  --sato-text-h2: 26px;
-  --sato-text-body-lg: 20px;
-  --sato-text-body: 16px;
-  --sato-text-caption: 12px;
+  /* Escala tipografica */
+  --sato-text-display: clamp(2.4rem, 6vw, 4.5rem);
+  --sato-text-h1: clamp(1.8rem, 4vw, 2.5rem);
+  --sato-text-h2: clamp(1.35rem, 3vw, 2rem);
+  --sato-text-body-lg: 1.04rem;
+  --sato-text-body: 0.95rem;
+  --sato-text-caption: 0.78rem;
 
   /* Espaciado */
-  --sato-space-section: 80px;
-  --sato-space-block: 32px;
-  --sato-space-inline: 16px;
+  --sato-space-section: clamp(4rem, 8vw, 6rem);
+  --sato-space-block: 2rem;
+  --sato-space-inline: 1rem;
 
-  /* Radio y sombras */
-  --sato-radius-button: 8px;
-  --sato-radius-card: 12px;
-  --sato-radius-card-lg: 24px;
+  /* Radio — bordes grandes para suavidad confiable */
+  --sato-radius-button: calc(1rem + 0.25rem);
+  --sato-radius-card: calc(1rem + 0.5rem);
+  --sato-radius-card-lg: calc(1rem + 1rem);
   --sato-radius-pill: 9999px;
-  --sato-shadow-card: rgba(0, 0, 0, 0.04) 0px 4px 18px 0px, rgba(0, 0, 0, 0.027) 0px 2px 7.8px 0px;
+  
+  /* Sombras */
+  --sato-shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  --sato-shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  --sato-shadow-elevated: 0 18px 60px rgba(28, 64, 38, 0.08);
 
-  /* Breakpoints (para media queries) */
+  /* Breakpoints */
   --sato-bp-sm: 600px;
   --sato-bp-md: 768px;
   --sato-bp-lg: 1032px;
   --sato-bp-xl: 1280px;
   
   /* Contenedor */
-  --sato-container-max-width: 1280px;
-  --sato-container-padding: 24px;
+  --sato-container-max-width: 1180px;
+  --sato-container-padding: 1.25rem;
 }
 
 /* Clases utilitarias base para la landing */
@@ -68,12 +104,15 @@
 .landing-page {
   font-family: var(--sato-font-sans);
   color: var(--sato-color-text);
-  background-color: #ffffff;
+  background: var(--sato-color-bg);
+  line-height: 1.45;
 }
 
 .landing-page h1, .landing-page h2, .landing-page h3 {
   font-family: var(--sato-font-heading);
   color: var(--sato-color-text);
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
 @keyframes marquee {
@@ -377,21 +416,23 @@ html {
   margin-bottom: 3rem;
 }
 
-/* Bento card base styles */
+/* Bento card base styles — glassmorphism sutil */
 .landing-bento-card {
-  background: var(--sato-color-bg-card);
-  border: 1px solid var(--sato-color-border);
+  background: color-mix(in oklch, var(--sato-color-bg-card) 88%, transparent);
+  border: 1px solid color-mix(in oklch, var(--sato-color-border) 72%, transparent);
   border-radius: var(--sato-radius-card);
-  padding: 24px;
-  box-shadow: var(--sato-shadow-card);
+  padding: 1.5rem;
+  box-shadow: var(--sato-shadow-elevated);
+  backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), 
+              box-shadow 0.3s ease;
 }
 
 .landing-bento-card:hover {
   transform: translateY(-4px);
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 12px 32px 0px;
+  box-shadow: 0 20px 50px rgba(28, 64, 38, 0.12);
 }
 
 @media (prefers-reduced-motion: reduce) {
