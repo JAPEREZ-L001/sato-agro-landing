@@ -3,6 +3,7 @@ import { LandingHero } from "@/components/landing/LandingHero"
 import { LandingLogoStrip } from "@/components/landing/LandingLogoStrip"
 import { LandingBeforeAfter } from "@/components/landing/LandingBeforeAfter"
 import { LandingFeatureTabs } from "@/components/landing/LandingFeatureTabs"
+import { LandingAppShowcase } from "@/components/landing/LandingAppShowcase"
 import { LandingBentoGrid } from "@/components/landing/LandingBentoGrid"
 import { LandingProductStack } from "@/components/landing/LandingProductStack"
 import { LandingTrust } from "@/components/landing/LandingTrust"
@@ -37,6 +38,8 @@ export function LandingProductorPage() {
         <LandingBeforeAfter />
         
         <LandingFeatureTabs isProductor={true} />
+        
+        <LandingAppShowcase />
         
         <LandingBentoGrid isProductor={true} />
         
