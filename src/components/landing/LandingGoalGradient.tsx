@@ -33,10 +33,10 @@ export function LandingGoalGradient() {
       
       {/* Decorative SATO symbol - floating in background */}
       <div className="absolute top-8 right-[5%] opacity-10 pointer-events-none landing-anim-float hidden lg:block" aria-hidden="true">
-        <img src="/images/sato-symbol.png" alt="" className="w-32 h-auto" />
+        <img src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" alt="" className="w-32 h-auto" />
       </div>
       <div className="absolute bottom-8 left-[5%] opacity-10 pointer-events-none landing-anim-float-sm hidden lg:block" style={{ animationDelay: "2s" }} aria-hidden="true">
-        <img src="/images/sato-symbol.png" alt="" className="w-24 h-auto" />
+        <img src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" alt="" className="w-24 h-auto" />
       </div>
       
       <div className="landing-container relative z-10">

@@ -95,7 +95,7 @@ export function LandingHero({
               {/* Mock App Header */}
               <div className="h-16 bg-gradient-to-r from-[var(--sato-color-primary)] to-[var(--sato-color-primary-light)] flex items-center px-5">
                 <img 
-                  src="/images/sato-symbol.png" 
+                  src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
                   alt="" 
                   className="h-10 w-auto rounded-lg" 
                   aria-hidden="true"

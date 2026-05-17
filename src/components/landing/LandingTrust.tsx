@@ -7,14 +7,14 @@ export function LandingTrust() {
     <section className="landing-section bg-[var(--sato-color-bg-warm)] border-y border-[var(--sato-color-border)] relative overflow-hidden" id="confianza" aria-labelledby="trust-title">
       {/* Decorative background symbol */}
       <div className="absolute -top-12 -right-12 opacity-5 pointer-events-none landing-anim-float hidden lg:block" aria-hidden="true">
-        <img src="/images/sato-symbol.png" alt="" className="w-48 h-auto" />
+        <img src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" alt="" className="w-48 h-auto" />
       </div>
       
       <div className="landing-container relative">
         <LandingReveal className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-20 h-20 mb-6 landing-anim-float-sm">
-              <img src="/images/sato-symbol.png" alt="" className="w-full h-full object-contain" aria-hidden="true" />
+              <img src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" alt="" className="w-full h-full object-contain" aria-hidden="true" />
             </div>
             <h2 id="trust-title" className="text-[var(--sato-text-h1)] font-bold tracking-tight mb-6">
               Claro de donde viene. Honesto sobre los limites.

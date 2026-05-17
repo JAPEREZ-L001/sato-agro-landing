@@ -30,17 +30,17 @@ export function LandingInstitucionalPage() {
       <header className="sticky top-0 z-50 w-full border-b border-[var(--sato-color-border)] bg-white/90 backdrop-blur-lg shadow-sm">
         <div className="landing-container flex h-18 items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link to="/" className="flex items-center gap-1 group">
+            <Link to="/" className="flex items-center gap-2 group">
               <img 
-                src="/images/sato-symbol.png" 
+                src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
                 alt="" 
                 className="h-10 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" 
                 aria-hidden="true"
               />
               <img 
-                src="/images/sato-title.png" 
+                src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/a3355191-33c8-49dd-9540-9f3378391842_xfdbaw.png" 
                 alt="SATO" 
-                className="h-7 w-auto hidden sm:block"
+                className="h-6 w-auto hidden sm:block"
               />
             </Link>
             <span className="text-xs font-bold px-3 py-1.5 bg-[var(--sato-color-primary)]/10 text-[var(--sato-color-primary)] rounded-full hidden sm:inline-block">

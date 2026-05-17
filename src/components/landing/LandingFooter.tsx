@@ -7,15 +7,15 @@ export function LandingFooter() {
         <div className="flex flex-col gap-5">
           <div className="flex items-center gap-2">
             <img 
-              src="/images/sato-symbol.png" 
+              src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
               alt="" 
               className="h-12 w-auto" 
               aria-hidden="true"
             />
             <img 
-              src="/images/sato-title.png" 
+              src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/a3355191-33c8-49dd-9540-9f3378391842_xfdbaw.png" 
               alt="SATO" 
-              className="h-8 w-auto"
+              className="h-7 w-auto"
             />
           </div>
           <p className="text-sm text-[var(--sato-color-text-muted)] max-w-xs leading-relaxed">

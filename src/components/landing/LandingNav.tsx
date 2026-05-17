@@ -13,17 +13,17 @@ export function LandingNav() {
       </a>
       <div className="landing-container flex h-18 items-center justify-between">
         <div className="flex items-center gap-8">
-          <Link to="/" className="flex items-center gap-1 group" aria-label="Ir al inicio de SATO-Agro">
+          <Link to="/" className="flex items-center gap-2 group" aria-label="Ir al inicio de SATO-Agro">
             <img 
-              src="/images/sato-symbol.png" 
+              src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/d4ace0ca-4a1b-463c-ad47-b2b69f05b9f0_znkdwz.png" 
               alt="" 
               className="h-10 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" 
               aria-hidden="true"
             />
             <img 
-              src="/images/sato-title.png" 
+              src="https://res.cloudinary.com/dywctapuj/image/upload/f_auto/q_auto/a3355191-33c8-49dd-9540-9f3378391842_xfdbaw.png" 
               alt="SATO" 
-              className="h-7 w-auto hidden sm:block"
+              className="h-6 w-auto hidden sm:block"
             />
           </Link>
           
