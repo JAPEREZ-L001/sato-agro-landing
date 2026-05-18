@@ -89,16 +89,6 @@ export function LandingFaq() {
               })}
             </Accordion>
           </div>
-          
-          {/* Bottom CTA hint */}
-          <div className="text-center mt-10">
-            <p className="text-[0.86rem] text-[var(--sato-color-text-muted)] font-bold">
-              Tiene otra pregunta?{" "}
-              <a href="mailto:contacto@sato-agro.com" className="text-[var(--sato-color-primary)] font-extrabold hover:underline transition-all">
-                Escribanos
-              </a>
-            </p>
-          </div>
         </LandingReveal>
       </div>
     </section>
