@@ -84,13 +84,6 @@ export function LandingGoalGradient() {
             <p className="text-[0.78rem] font-extrabold text-[var(--sato-color-text-muted)]">
               Gratis - 2 minutos - Sin tarjeta
             </p>
-            
-            <button 
-              disabled 
-              className="mt-4 inline-flex items-center gap-2 text-[0.86rem] font-extrabold text-[var(--sato-color-text-muted)]/60 bg-[var(--sato-color-border)]/30 rounded-[0.85rem] px-4 py-2 cursor-not-allowed"
-            >
-              Proximamente
-            </button>
           </div>
         </LandingReveal>
       </div>
