@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Mail, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 
 export function LandingFooter() {
   return (
@@ -43,10 +43,6 @@ export function LandingFooter() {
         {/* Contacto column */}
         <div className="flex flex-col gap-4">
           <h4 className="font-black text-[var(--sato-color-text)]">Contacto</h4>
-          <a href="mailto:contacto@sato-agro.com" className="text-[0.84rem] font-extrabold text-[var(--sato-color-text-muted)] hover:text-[var(--sato-color-primary)] transition-all duration-300 hover:translate-x-1 flex items-center gap-2">
-            <Mail className="w-4 h-4" />
-            contacto@sato-agro.com
-          </a>
           <div className="text-[0.84rem] font-extrabold text-[var(--sato-color-text-muted)] flex items-center gap-2">
             <MapPin className="w-4 h-4" />
             El Salvador
