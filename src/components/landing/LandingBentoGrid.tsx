@@ -29,9 +29,6 @@ export function LandingBentoGrid({ isProductor = true }: LandingBentoGridProps) 
               </div>
               <h3 className="text-xl font-bold text-[var(--sato-color-text)] mb-2">Su cultivo en riesgo — le avisamos</h3>
               <p className="text-[var(--sato-color-text-muted)] mb-6 flex-1">Vea el nivel de riesgo y cuándo actuar.</p>
-              <Link to="/app" className="flex items-center gap-2 text-[var(--sato-color-primary)] font-semibold group-hover:text-[var(--sato-color-primary-active)] transition-colors mt-auto">
-                Ver ejemplo <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform landing-arrow-nudge" />
-              </Link>
             </div>
 
             {/* Card 2 */}
@@ -47,9 +44,6 @@ export function LandingBentoGrid({ isProductor = true }: LandingBentoGridProps) 
               </div>
               <h3 className="text-xl font-bold text-[var(--sato-color-text)] mb-2">Qué hacer esta semana</h3>
               <p className="text-[var(--sato-color-text-muted)] mb-6 flex-1">Acciones concretas para las próximas 24–48 horas.</p>
-              <Link to="/app" className="flex items-center gap-2 text-[var(--sato-color-primary)] font-semibold group-hover:text-[var(--sato-color-primary-active)] transition-colors mt-auto">
-                Ver recomendaciones <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
             </div>
 
             {/* Card 3 */}
@@ -63,9 +57,6 @@ export function LandingBentoGrid({ isProductor = true }: LandingBentoGridProps) 
               </div>
               <h3 className="text-xl font-bold text-[var(--sato-color-text)] mb-2">Clima en su municipio</h3>
               <p className="text-[var(--sato-color-text-muted)] mb-6 flex-1">Contexto local sin mapas difíciles de leer.</p>
-              <Link to="/app" className="flex items-center gap-2 text-[var(--sato-color-primary)] font-semibold group-hover:text-[var(--sato-color-primary-active)] transition-colors mt-auto">
-                Ver mi zona <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
             </div>
           </div>
         ) : (
